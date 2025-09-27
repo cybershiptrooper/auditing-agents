@@ -28,7 +28,7 @@ dependencies = [
     "fastmcp",
     "claude-code-sdk",
     "nest-asyncio",
-    "docent-python",
+    "docent-python==0.1.13a0",
     "backoff",
     "datasets",
     "openai-agents",
