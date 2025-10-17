@@ -12,13 +12,13 @@ export CUDA_VISIBLE_DEVICES=0,1,2,3
 #     --enable-prefix-caching \
 #     --max-lora-rank 256
 
-
 python -m vllm.entrypoints.openai.api_server \
     --model meta-llama/Llama-3.3-70B-Instruct \
     --tensor-parallel-size 4 \
     --enable-lora \
     --lora-modules \
       auditing-agents/llama-3.3-70b-sft-lora=auditing-agents/llama-3.3-70b-sft-lora \
+      auditing-agents/llama-3.3-70b-dpo-lora=auditing-agents/llama-3.3-70b-dpo-lora \
       auditing-agents/llama-3.3-70b-rt-lora=auditing-agents/llama-3.3-70b-rt-lora \
       auditing-agents/llama-3.3-70b-midtrain-lora=auditing-agents/llama-3.3-70b-midtrain-lora \
     --port 8000 \
